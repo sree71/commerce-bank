@@ -10,6 +10,6 @@ public class WidgetController {
 
     @RequestMapping(method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public Widget index() {
-        return new Widget("Type Your Name Here");
+        return new Widget("Commerce Bank ex");
     }
 }
