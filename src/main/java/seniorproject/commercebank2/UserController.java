@@ -14,7 +14,8 @@ public class UserController {
     @GetMapping(path="/add")    // Map ONLY GET Requests
     public @ResponseBody String addNewUser (@RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
                                             @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testSalt") String salt, @RequestParam(defaultValue = "testUser") String user){
-        User n = new User(group, account, password, salt, user);
+        User n = new User();
+        n.updateUser(group, account, password, salt, user);
         userRepository.save(n);
         return "Saved";
     }

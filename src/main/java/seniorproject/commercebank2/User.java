@@ -20,10 +20,10 @@ public class User implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "group")
+    @Column(name = "user_group")
     private String groupName;
 
-    @Column(name = "account")
+    @Column(name = "user_account")
     private String accountName;
 
     @Column(name = "password")
@@ -40,14 +40,19 @@ public class User implements Serializable {
     @CreationTimestamp
     private Timestamp timestamp;*/
 
-    public User(String groupName, String accountName, String password, String salt, String userName) {
+    public void updateUser(String groupName, String accountName, String password, String salt, String userName) {
+        //User user=new User();
+        this.id=null;
         this.groupName = groupName;
         this.accountName = accountName;
         this.password = password;
         this.salt = salt;
         this.userName = userName;
+
         //this.timestamp = CURRENT.TIM;
+        //return user;
     }
+
 
     public Long getId() {
         return id;
