@@ -2,14 +2,9 @@ package seniorproject.commercebank2;
 
 
 
-import org.hibernate.annotations.CreationTimestamp;
-
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Date;
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.time.LocalDate;
+
 
 @Entity
 @Table(name = "mic_credentials")
@@ -35,10 +30,6 @@ public class User implements Serializable {
     @Column(name = "create_user")
     private String userName;
 
-    /*
-    @Column(name = "create_timestamp")
-    @CreationTimestamp
-    private Timestamp timestamp;*/
 
     public void updateUser(String groupName, String accountName, String password, String salt, String userName) {
         //User user=new User();
@@ -102,11 +93,5 @@ public class User implements Serializable {
         this.userName = userName;
     }
 
-//    public Date getCreateDate() {
-//        return createDate;
-//    }
-//
-//    public void setCreateDate(Date createDate) {
-//        this.createDate = createDate;
-//    }
+
 }
