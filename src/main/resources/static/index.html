@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+<h1 id="display">Test page</h1>
+<button>Send an HTTP POST request to a page and get the result back</button>
+
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $.get("/user/all",
+
+                function(data,status){
+                var dd="";
+                    for(i=0;i<data.length;i++){
+                        dd+=data[i].id+"<br>";
+                    }
+                    $("#display").html(dd);
+                });
+        });
+    });
+</script>
+</body>
+</html>

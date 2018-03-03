@@ -13,4 +13,15 @@ public class CommerceBank2ApplicationTests {
     public void contextLoads() {
     }
 
+    @Test
+    public void testCase1(){
+        int i = 1+1;
+        assert(i == 2);
+    }
+
+    @Test
+    public void testCase2(){
+        int i = 1+1;
+        assert(i == 2);
+    }
 }
