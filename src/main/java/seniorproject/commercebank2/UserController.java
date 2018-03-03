@@ -11,15 +11,31 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping(path="/add")    // Map ONLY GET Requests
+    @RequestMapping(path="/add")
     public @ResponseBody String addNewUser (@RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
-                                            @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testSalt") String salt, @RequestParam(defaultValue = "testUser") String user){
-        User n = new User();
-        n.updateUser(group, account, password, salt, user);
-        userRepository.save(n);
+                                            @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testSalt") String salt, @RequestParam(defaultValue = "testUser") String name){
+        User user = new User();
+        user.updateUser(group, account, password, salt, name);
+        userRepository.save(user);
         return "Saved";
     }
 
+    @RequestMapping(path="/update")
+    public @ResponseBody String updateUser (@RequestParam Long id, @RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
+                                            @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testSalt") String salt, @RequestParam(defaultValue = "testUser") String name){
+        User user = userRepository.findOne(id);
+        user.updateUser(group, account, password, salt, name);
+        userRepository.save(user);
+        return "Updated";
+    }
+
+    @RequestMapping(path="/delete")
+    public @ResponseBody String deleteUser (@RequestParam Long id, @RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
+                                            @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testSalt") String salt, @RequestParam(defaultValue = "testUser") String name){
+        User user = userRepository.findOne(id);
+        userRepository.delete(id);
+        return "Deleted";
+    }
 
 
     @GetMapping(path="/all")

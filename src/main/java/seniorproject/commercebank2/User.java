@@ -32,16 +32,11 @@ public class User implements Serializable {
 
 
     public void updateUser(String groupName, String accountName, String password, String salt, String userName) {
-        //User user=new User();
-        this.id=null;
         this.groupName = groupName;
         this.accountName = accountName;
         this.password = password;
         this.salt = salt;
         this.userName = userName;
-
-        //this.timestamp = CURRENT.TIM;
-        //return user;
     }
 
 
@@ -93,5 +88,15 @@ public class User implements Serializable {
         this.userName = userName;
     }
 
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", groupName='" + groupName + '\'' +
+                ", accountName='" + accountName + '\'' +
+                ", password='" + password + '\'' +
+                ", salt='" + salt + '\'' +
+                ", userName='" + userName + '\'' +
+                '}';
+    }
 }
