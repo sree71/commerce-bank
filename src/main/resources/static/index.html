@@ -51,7 +51,7 @@
                     	$("#content-body").append(row);
                     }
                 });
-        };
+        }
         
     function addUser(){
     	var win = window.open("/createuser.html", '_blank');
@@ -59,9 +59,16 @@
     }
     
     function deleteUser(id){
-    	var r = confirm("Are you sure you want to delete a user");
-        if (r == true) {
+    	var r = confirm("Are you sure you want to delete a user" + id);
+
+    	if (r){
+            $.post("/user/delete",
+                { id: id},
+                function(data,status) {
+                    alert(data);
+                });
         }
+
     }
 </script>
 </body>

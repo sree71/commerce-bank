@@ -35,9 +35,9 @@ public class UserController {
         return "Updated";
     }
 
-    @RequestMapping(path="/delete")
-    public @ResponseBody String deleteUser (@RequestParam Long id, @RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
-                                            @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testSalt") String salt, @RequestParam(defaultValue = "testUser") String name){
+    @RequestMapping(path="/delete", method = RequestMethod.POST)
+    public @ResponseBody String deleteUser (@RequestParam Long id /*@RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
+                                            @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testSalt") String salt, @RequestParam(defaultValue = "testUser") String name*/){
         User user = userRepository.findOne(id);
         userRepository.delete(id);
         return "Deleted";
