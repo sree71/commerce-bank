@@ -9,59 +9,26 @@
 </head>
 <body>
 <h1 id="display">Credentials</h1>
-<button onclick="addUser()">Add</button>
-<button onclick="getUserList()">List</button>
-<br/>
-<br/>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Account</th>
-<th>Group</th>
-<th>Actions</th>
-</thead>
-
-<tbody id="content-body">
-
-</tbody>
-</table>
+<button>Send an HTTP POST request to a page and get the result back</button>
+<button onclick="myFunction()">Delete</button>
+<button onclick="myFunction()">Add</button>
+<button onclick="myFunction()">List</button>
+<button onclick="myFunction()">update</button>
 
 <script>
-        function getUserList(){
-           	$("#content-body").html("");
+    $(document).ready(function(){
+        $("button").click(function(){
             $.get("/user/all",
+
                 function(data,status){
+                var dd="";
                     for(i=0;i<data.length;i++){
-                        +"<br>";
-                        var updatebutton = $("<input type='button' onclick='deleteUser("+data[i].id+")' value='Delete'>")
-                        var deletebutton = $("<input type='button' onclick='updateUser("+data[i].id+")' value='Update'>")
-                        var row = $("<tr/>")
-                        var action = $("<td/>")
-                        var name = $("<td>"+data[i].userName+"</td>")
-                        var account = $("<td>"+data[i].accountName+"</td>")
-                        var group = $("<td>"+data[i].groupName+"</td>")
-                        $(row).append(name);
-                        $(row).append(account);
-                        $(row).append(group);
-                        $(action).append(updatebutton);
-                        $(action).append(deletebutton);
-                        $(row).append(action);
-                    	$("#content-body").append(row);
+                        dd+=data[i].id+"<br>";
                     }
+                    $("#display").html(dd);
                 });
-        };
-        
-    function addUser(){
-    	var win = window.open("/createuser.html", '_blank');
-    	  win.focus();
-    }
-    
-    function deleteUser(id){
-    	var r = confirm("Are you sure you want to delete a user");
-        if (r == true) {
-        }
-    }
+        });
+    });
 </script>
 </body>
 </html>
