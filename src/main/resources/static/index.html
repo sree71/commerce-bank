@@ -3,17 +3,50 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css" src="login.js">
     <title>Credentials</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 </head>
-<body>
+
+
 <h1 id="display">Credentials</h1>
+
+
+<body>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>Password</th>
+    </tr>
+    <?php
+$conn = mysqli_connect("jdbc:mysql://153.91.152.245:3306/seniorproject", "seniorproject", "", "thisisnotafakepassword");
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "SELECT id, user_group, password FROM mic_credentials";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+    echo "<tr><td>" . $row["id"]. "</td><td>" . $row["user_group"] . "</td><td>"
+    . $row["password"]. "</td></tr>";
+    }
+    echo "</table>";
+} else { echo "0 results"; }
+$conn->close();
+?>
+</table>
+</body>
+
+<br><br><br><br><br><br>
+
 <button>Send an HTTP POST request to a page and get the result back</button>
-<button onclick="myFunction()">Delete</button>
-<button onclick="myFunction()">Add</button>
-<button onclick="myFunction()">List</button>
-<button onclick="myFunction()">update</button>
+<button onclick="myFunctionDelete()">Delete</button>
+<button onclick="myFunctionAdd()">Add</button>
+<button onclick="myFunctionList()">List</button>
+<button onclick="myFunctionUpdate()">Update</button>
 
 <script>
     $(document).ready(function(){
@@ -30,5 +63,5 @@
         });
     });
 </script>
-</body>
+
 </html>
