@@ -14,7 +14,7 @@ public class Driver {
             Statement myStmt = myConn.createStatement();
 
             //execute sql query
-            ResultSet myRs = myStmt.executeQuery("SELECT * FROM ")
+            ResultSet myRs = myStmt.executeQuery("SELECT * FROM ");
         }
 
         catch(Exception exc){
