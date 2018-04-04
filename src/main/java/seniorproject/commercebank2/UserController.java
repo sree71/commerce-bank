@@ -35,10 +35,8 @@ public class UserController {
         return "Updated";
     }
 
-    @RequestMapping(path="/delete", method = RequestMethod.POST)
-    public @ResponseBody String deleteUser (@RequestParam Long id /*@RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
-                                            @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testSalt") String salt, @RequestParam(defaultValue = "testUser") String name*/){
-        User user = userRepository.findOne(id);
+    @RequestMapping(path="/delete/{id}",method=RequestMethod.POST)
+    public @ResponseBody String deleteUser (@PathVariable Long id){
         userRepository.delete(id);
         return "Deleted";
     }
@@ -49,10 +47,9 @@ public class UserController {
         return userRepository.findAll();
     }
 
-    /*
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    @ResponseStatus(HttpStatus.OK)
     public User getUser(@PathVariable("id") Long id){
-        return userRepository.findOne(id);
-    }*/
+        User user =  userRepository.findOne(id);
+        return user;
+    }
 }
