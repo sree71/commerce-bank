@@ -2,33 +2,36 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Credentials</title>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</form><title>Credentials</title>
+	<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-</head>
-<body>
-<div style="padding:100px 200px;border: 1px solid #000">
-<h1>Update User</h1>
-	<form action="/user/update" method="post">
-	<div style="padding: 10px;">
-	 <input type="hidden" name="id" id="id">
-		<label>Group Name : </label> <input type="text" name="group" id="group"><br>
+	</head>
+	<body>
+	<div style="padding:100px 200px;border: 1px solid #000">
+		<h1>Update User</h1>
+		<form action="/user/update" method="post">
+			<div style="padding: 10px;">
+				<input type="hidden" name="id" id="id">
+				<label>Group Name : </label> <input type="text" name="group" id="group"><br>
+			</div>
+			<div style="padding: 10px;">
+				<label>Account Name : </label> <input type="text" name="account" id="account"><br>
+			</div>
+			<div style="padding: 10px;">
+				<label>User Name : </label> <input type="text" name="name" id="name"><br>
+			</div>
+			<div style="padding: 10px;">
+				<label>Current Password : </label> <input type="text" name="currentPassword" id="currentPassword"><br>
+			</div>
+			<div style="padding: 10px;">
+				<label>New Password : </label> <input type="text" name="newPassword" id="newPassword"><br>
+			</div>
+			<div style="padding: 10px;">
+				<input type="button" onclick="updateUser()" value="Update User">
+			</div>
+
 	</div>
-	<div style="padding: 10px;">
-		<label>Account Name : </label> <input type="text" name="account" id="account"><br>
-	</div>
-	<div style="padding: 10px;">
-		<label>User Name : </label> <input type="text" name="name" id="name"><br>
-	</div>
-	<div style="padding: 10px;">
-		<label>Password : </label> <input type="hidden" name="password" id="password"><br>
-	</div>
-	<div style="padding: 10px;">
-		<input type="button" onclick="updateUser()" value="Update User">
-	</div>
-	</form>
-</div>
 	<script>
 	function updateUser(){
 		$.ajax({
@@ -52,7 +55,9 @@
 			$("#group").val(data.groupName);
 			$("#account").val(data.accountName);
 			$("#name").val(data.userName);
-			$("#password").val(data.password);
+            $("#currentPassword").val(data.password);
+			$("#newPassword").val(data.newPassword);
+
         });
 	</script>
 </body>
