@@ -83,12 +83,12 @@
             <artifactId>spring-security-config</artifactId>
             <version>5.0.3.RELEASE</version>
         </dependency>
-        <!-- tag::security[] -->
+        <!-- tag::seniorproject.commercebank2.security[] -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
-        <!-- end::security[] -->
+        <!-- end::seniorproject.commercebank2.security[] -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
