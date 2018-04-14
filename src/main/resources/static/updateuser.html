@@ -41,14 +41,14 @@
 			  success: function(response) {
 				  alert(response);
 				  window.location.href="index.html";
-			  },
+			  }
 			});
 	}
 
-	var url_string = window.location.href
+	var url_string = window.location.href;
 	var url = new URL(url_string);
 	var c = url.searchParams.get("id");
-	 $.get("/user/"+c,
+	 $.post("/user/"+c,
  	    function(data,status){
 
 			$("#id").val(data.id);

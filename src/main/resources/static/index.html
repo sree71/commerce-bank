@@ -29,29 +29,30 @@
 </table>
 
 <script>
-        function getUserList(){
-           	$("#content-body").html("");
-            $.get("/user/all",
-                function(data,status){
-                    for(i=0;i<data.length;i++){
-                        +"<br>";
-                        var updatebutton = $("<input type='button' onclick='deleteUser("+data[i].id+")' value='Delete'>")
-                        var deletebutton = $("<input type='button' onclick='updateUser("+data[i].id+")' value='Update'>")
-                        var row = $("<tr/>")
-                        var action = $("<td/>")
-                        var name = $("<td>"+data[i].userName+"</td>")
-                        var account = $("<td>"+data[i].accountName+"</td>")
-                        var group = $("<td>"+data[i].groupName+"</td>")
-                        $(row).append(name);
-                        $(row).append(account);
-                        $(row).append(group);
-                        $(action).append(updatebutton);
-                        $(action).append(deletebutton);
-                        $(row).append(action);
-                    	$("#content-body").append(row);
-                    }
-                });
-        };
+    function getUserList(){
+        $("#content-body").html("");
+        $.post("/user/all",
+            function(data,status){
+                for(i=0;i<data.length;i++){
+                    +"<br>";
+                    var updatebutton = $("<input type='button' onclick='deleteUser("+data[i].id+")' value='Delete'>");
+                    var deletebutton = $("<input type='button' onclick='updateUser("+data[i].id+")' value='Update'>");
+                    var row = $("<tr/>");
+                    var action = $("<td/>");
+                    var name = $("<td>"+data[i].userName+"</td>");
+                    var account = $("<td>"+data[i].accountName+"</td>");
+                    var group = $("<td>"+data[i].groupName+"</td>");
+                    $(row).append(name);
+                    $(row).append(account);
+                    $(row).append(group);
+                    $(action).append(updatebutton);
+                    $(action).append(deletebutton);
+                    $(row).append(action);
+                    $("#content-body").append(row);
+                }
+            });
+    }
+
         
     function addUser(){
     	var win = window.open("/createuser.html", '_blank');
@@ -63,20 +64,20 @@
                 //win.focus();
     }
 
-        function deleteUser(id) {
-            var r = confirm("Are you sure you want to delete a user");
-            if (r == true) {
-                $.ajax({
-                    type: 'POST',
-                    url: '/user/delete',
-                    data: 'id='+id,
-                    success: function (response) {
-                        alert(response);
-                        getUserList();
-                    }
-                });
-            }
+    function deleteUser(id) {
+        var r = confirm("Are you sure you want to delete a user");
+        if (r == true) {
+            $.ajax({
+                type: 'POST',
+                url: '/user/delete',
+                data: 'id='+id,
+                success: function (response) {
+                    alert(response);
+                    getUserList();
+                }
+            });
         }
+    }
 
 </script>
 </body>
