@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Credentials</title>
+    <link rel="stylesheet" type="text/css" href="style.css" src="login.js">
+    <title>Credentials:</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
@@ -50,29 +51,30 @@
                     	$("#content-body").append(row);
                     }
                 });
-        };
+        }
         
     function addUser(){
     	var win = window.open("/createuser.html", '_blank');
     	  win.focus();
     }
+
     function updateUser(id){
-    	var win = window.open("/updateuser.html?id="+id, '_blank');
-    	  win.focus();
+            var win = window.open("/updateuser.html?id="+id, '_blank');
+                win.focus();
     }
     
     function deleteUser(id){
-    	var r = confirm("Are you sure you want to delete a user");
-        if (r == true) {
-        	$.ajax({
-  			  type: 'POST',
-  			  url: '/user/delete/'+id,
-  			  success: function(response) { 
-  				  alert(response);
-  				getUserList();
-  			  },
-  			});
+    	var r = confirm("Are you sure you want to delete a user" + id);
+
+    	if (r){
+            $.post("/user/delete",
+                { id: id},
+                function(data,status) {
+                    alert(data);
+                    getUserList();
+                });
         }
+
     }
 </script>
 </body>
