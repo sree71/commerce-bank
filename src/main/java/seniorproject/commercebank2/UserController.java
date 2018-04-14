@@ -3,6 +3,7 @@ package seniorproject.commercebank2;
 
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import seniorproject.commercebank2.utils.CommerceBankUtils;
@@ -27,7 +28,7 @@ public class UserController {
         return "Saved";
     }
 
-    @RequestMapping(path="/update")
+    @RequestMapping(path="/update", method = RequestMethod.POST)
     public @ResponseBody String updateUser (@RequestParam Long id, @RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
                                             @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testUser") String name){
         Optional<User> opt = userRepository.findById(id);
@@ -43,8 +44,7 @@ public class UserController {
     }
 
     @RequestMapping(path="/delete", method = RequestMethod.POST)
-    public @ResponseBody String deleteUser (@RequestParam Long id /*@RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
-                                            @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testSalt") String salt, @RequestParam(defaultValue = "testUser") String name*/){
+    public @ResponseBody String deleteUser (@RequestParam Long id){
         Optional<User> opt = userRepository.findById(id);
         if(opt.isPresent()){
             User user = opt.get();
@@ -60,10 +60,14 @@ public class UserController {
         return userRepository.findAll();
     }
 
-    /*
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public User getUser(@PathVariable("id") Long id){
-        return userRepository.findOne(id);
-    }*/
+        Optional<User> opt = userRepository.findById(id);
+        if(opt.isPresent()){
+            User user = opt.get();
+            return user;
+        }
+        return null;
+    }
 }

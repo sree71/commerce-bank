@@ -57,10 +57,10 @@
     	var win = window.open("/createuser.html", '_blank');
     	  win.focus();
     }
-
+        getUserList();
     function updateUser(id){
-            var win = window.open("/updateuser.html?id="+id, '_blank');
-                win.focus();
+            var win = window.location.href="/updateuser.html?id="+id;
+                //win.focus();
     }
 
         function deleteUser(id) {
@@ -68,7 +68,8 @@
             if (r == true) {
                 $.ajax({
                     type: 'POST',
-                    url: '/user/delete/' + id,
+                    url: '/user/delete',
+                    data: 'id='+id,
                     success: function (response) {
                         alert(response);
                         getUserList();
