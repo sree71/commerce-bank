@@ -1,4 +1,4 @@
-package security;
+package seniorproject.commercebank2;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,20 +14,25 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests()
-                .antMatchers("/", "/home").permitAll()
-                .anyRequest().authenticated()
-                .and()
-                .formLogin()
-                .loginPage("/login")
-                .permitAll()
-                .and()
-                .logout()
-                .permitAll();
+    protected void configure(HttpSecurity http) {
+        try {
+            http
+                    .csrf().disable()
+                    .authorizeRequests()
+                    .antMatchers("/", "/home.html").permitAll()
+                    .anyRequest().authenticated()
+                    .and()
+                    .formLogin()
+                    .loginPage("/login.html")
+                    .permitAll()
+                    .and()
+                    .logout()
+                    .permitAll();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-    
+
 
     @Bean
     @Override
