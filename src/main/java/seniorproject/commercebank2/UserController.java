@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 import seniorproject.commercebank2.utils.CommerceBankUtils;
 
+import javax.swing.text.html.Option;
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -27,20 +30,28 @@ public class UserController {
     @RequestMapping(path="/update")
     public @ResponseBody String updateUser (@RequestParam Long id, @RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
                                             @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testUser") String name){
-        User user = userRepository.findOne(id);
-        String salt = CommerceBankUtils.generateSalt();
-        String hashPassword = CommerceBankUtils.generateHash(password, salt);
-        user.updateUser(group, account, hashPassword, salt, name);
-        userRepository.save(user);
-        return "Updated";
+        Optional<User> opt = userRepository.findById(id);
+        if(opt.isPresent()) {
+            User user= opt.get();
+            String salt = CommerceBankUtils.generateSalt();
+            String hashPassword = CommerceBankUtils.generateHash(password, salt);
+            user.updateUser(group, account, hashPassword, salt, name);
+            userRepository.save(user);
+            return "Updated";
+        }
+        return "Not Found";
     }
 
     @RequestMapping(path="/delete", method = RequestMethod.POST)
     public @ResponseBody String deleteUser (@RequestParam Long id /*@RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
                                             @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testSalt") String salt, @RequestParam(defaultValue = "testUser") String name*/){
-        User user = userRepository.findOne(id);
-        userRepository.delete(id);
-        return "Deleted";
+        Optional<User> opt = userRepository.findById(id);
+        if(opt.isPresent()){
+            User user = opt.get();
+            userRepository.delete(user);
+            return "Deleted";
+        }
+        return "Not Found";
     }
 
 
