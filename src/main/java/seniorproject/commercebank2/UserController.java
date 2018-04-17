@@ -21,9 +21,8 @@ public class UserController {
     public @ResponseBody String addNewUser (@RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
                                             @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testUser") String name){
         User user = new User();
-        String salt = CommerceBankUtils.generateSalt();
-        String hashPassword = CommerceBankUtils.generateHash(password, salt);
-        user.updateUser(group, account, hashPassword, salt, name);
+        String hashPassword = JasyptE.encrypt(password);
+        user.updateUser(group, account, hashPassword, "", name);
         userRepository.save(user);
         return "Saved";
     }
@@ -34,9 +33,8 @@ public class UserController {
         Optional<User> opt = userRepository.findById(id);
         if(opt.isPresent()) {
             User user= opt.get();
-            String salt = CommerceBankUtils.generateSalt();
-            String hashPassword = CommerceBankUtils.generateHash(password, salt);
-            user.updateUser(group, account, hashPassword, salt, name);
+            String hashPassword = JasyptE.encrypt(password);
+            user.updateUser(group, account, hashPassword, "", name);
             userRepository.save(user);
             return "Updated";
         }
@@ -66,6 +64,7 @@ public class UserController {
         Optional<User> opt = userRepository.findById(id);
         if(opt.isPresent()){
             User user = opt.get();
+            user.setPassword(JasyptE.decrypt(user.getPassword()));
             return user;
         }
         return null;
