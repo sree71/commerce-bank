@@ -15,28 +15,20 @@ public class Login implements Serializable{
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "user_group")
-    private String groupName;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "user_account")
-    private String accountName;
+    @Column(name = "group_name")
+    private String groupName;
 
     @Column(name = "password")
     private String password;
 
-    @Column(name = "salt")
-    private String salt;
 
-    @Column(name = "create_user")
-    private String userName;
-
-
-    public void updateUser(String groupName, String accountName, String password, String salt, String userName) {
+    public void updateUser(String groupName, String name, String password) {
         this.groupName = groupName;
-        this.accountName = accountName;
+        this.name = name;
         this.password = password;
-        this.salt = salt;
-        this.userName = userName;
     }
 
 
@@ -56,14 +48,6 @@ public class Login implements Serializable{
         this.groupName = groupName;
     }
 
-    public String getAccountName() {
-        return accountName;
-    }
-
-    public void setAccountName(String accountName) {
-        this.accountName = accountName;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -72,32 +56,11 @@ public class Login implements Serializable{
         this.password = password;
     }
 
-    public String getSalt() {
-        return salt;
+    public String getName() {
+        return name;
     }
 
-    public void setSalt(String salt) {
-        this.salt = salt;
+    public void setName(String name) {
+        this.name = name;
     }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", groupName='" + groupName + '\'' +
-                ", accountName='" + accountName + '\'' +
-                ", password='" + password + '\'' +
-                ", salt='" + salt + '\'' +
-                ", userName='" + userName + '\'' +
-                '}';
-    }
-
 }

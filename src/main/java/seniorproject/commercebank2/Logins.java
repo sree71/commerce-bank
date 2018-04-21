@@ -24,32 +24,18 @@ public class Logins implements UserDetailsService{
 
     @Override
     public UserDetails loadUserByUsername(String username) {
-        Optional<Login> opt = loginRepository.findById(Long.valueOf(username));
-        if(opt.isPresent()) {
-            Login login = opt.get();
-            login.setPassword(JasyptE.decrypt(login.getPassword()));
-            List<GrantedAuthority> auth = AuthorityUtils
-                    .commaSeparatedStringToAuthorityList("ROLE_ADMIN");
-            String password = login.getPassword();
-            return new org.springframework.security.core.userdetails.User(login.getAccountName(), password,
-                    auth);
+        Login login=loginRepository.findByName(username);
+        if (login == null){
+            return null;
         }
-        return null;
-    }
 
-//    public UserDetails loadUserById(Long id){
-//        Optional<Login> opt = loginRepository.findById(id);
-//        if(opt.isPresent()) {
-//            Login login = opt.get();
-//            login.setPassword(JasyptE.decrypt(login.getPassword()));
-//            List<GrantedAuthority> auth = AuthorityUtils
-//                    .commaSeparatedStringToAuthorityList("ROLE_ADMIN");
-//            String password = login.getPassword();
-//            return new org.springframework.security.core.userdetails.User(login.getAccountName(), password,
-//                    auth);
-//        }
-//        return null;
-//    }
+        List<GrantedAuthority> auth = AuthorityUtils
+                .commaSeparatedStringToAuthorityList("ROLE_USER");
+        String password = login.getPassword();
+        return new org.springframework.security.core.userdetails.User(username, password,
+                auth);
+
+    }
 
 
 }
