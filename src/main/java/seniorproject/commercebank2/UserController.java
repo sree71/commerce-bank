@@ -17,7 +17,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @RequestMapping(path="/add")
+    @RequestMapping(path="/add", method = RequestMethod.POST)
     public @ResponseBody String addNewUser (@RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
                                             @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testUser") String name){
         User user = new User();
@@ -53,12 +53,12 @@ public class UserController {
     }
 
 
-    @GetMapping(path="/all")
+    @RequestMapping(path="/all", method = RequestMethod.POST)
     public @ResponseBody Iterable<User> getAllUsers(){
         return userRepository.findAll();
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/{id}", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     public User getUser(@PathVariable("id") Long id){
         Optional<User> opt = userRepository.findById(id);
