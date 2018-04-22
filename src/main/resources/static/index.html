@@ -12,6 +12,7 @@
 <h1 id="display">Credentials</h1>
 <button onclick="addUser()">Add</button>
 <button onclick="getUserList()">List</button>
+<button onclick="logout()">Logout</button>
 <br/>
 <br/>
 <table>
@@ -75,6 +76,10 @@
                 }
             });
         }
+    }
+
+    function logout(){
+        var win = window.location.href="/logout";
     }
 
 </script>
