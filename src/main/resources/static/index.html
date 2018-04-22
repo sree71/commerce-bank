@@ -55,13 +55,11 @@
 
         
     function addUser(){
-    	var win = window.open("/createuser.html", '_blank');
-    	  win.focus();
+        var win = window.location.href="/createuser.html";
     }
         getUserList();
     function updateUser(id){
-            var win = window.location.href="/updateuser.html?id="+id;
-                //win.focus();
+        var win = window.location.href="/updateuser.html?id="+id;
     }
 
     function deleteUser(id) {
