@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.*;
 
 import seniorproject.commercebank2.utils.CommerceBankUtils;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.swing.text.html.Option;
+import java.security.Principal;
 import java.util.Optional;
 
 @RestController
@@ -16,6 +18,9 @@ import java.util.Optional;
 public class UserController {
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private LoginRepository loginRepository;
 
     @RequestMapping(path="/add", method = RequestMethod.POST)
     public @ResponseBody String addNewUser (@RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
@@ -53,9 +58,14 @@ public class UserController {
     }
 
 
+
+
     @RequestMapping(path="/all", method = RequestMethod.POST)
-    public @ResponseBody Iterable<User> getAllUsers(){
-        return userRepository.findAll();
+    public @ResponseBody Iterable<User> getAllUsers(HttpServletRequest request){
+        Principal principal = request.getUserPrincipal();
+        Login login = loginRepository.findByName(principal.getName());
+        String group = login.getGroupName();
+        return userRepository.findByGroup(group);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.POST)
