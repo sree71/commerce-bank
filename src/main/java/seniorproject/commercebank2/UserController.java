@@ -38,8 +38,8 @@ public class UserController {
         Optional<User> opt = userRepository.findById(id);
         if(opt.isPresent()) {
             User user= opt.get();
-//            String hashPassword = JasyptE.encrypt(password);
-            user.updateUser(group, account, /*hashPassword*/ password, "", name);
+           String hashPassword = JasyptE.encrypt(password);
+            user.updateUser(group, account, hashPassword, "", name);
             userRepository.save(user);
             return "Updated";
         }
