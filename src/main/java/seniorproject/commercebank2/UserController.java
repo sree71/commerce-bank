@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.*;
 
 import seniorproject.commercebank2.utils.CommerceBankUtils;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.swing.text.html.Option;
+import java.security.Principal;
 import java.util.Optional;
 
 @RestController
@@ -17,12 +19,15 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private LoginRepository loginRepository;
+
     @RequestMapping(path="/add", method = RequestMethod.POST)
     public @ResponseBody String addNewUser (@RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
                                             @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testUser") String name){
         User user = new User();
-        String hashPassword = JasyptE.encrypt(password);
-        user.updateUser(group, account, hashPassword, "", name);
+//        String hashPassword = JasyptE.encrypt(password);
+        user.updateUser(group, account, /*hashPassword*/ password, "", name);
         userRepository.save(user);
         return "Saved";
     }
@@ -33,7 +38,7 @@ public class UserController {
         Optional<User> opt = userRepository.findById(id);
         if(opt.isPresent()) {
             User user= opt.get();
-            String hashPassword = JasyptE.encrypt(password);
+           String hashPassword = JasyptE.encrypt(password);
             user.updateUser(group, account, hashPassword, "", name);
             userRepository.save(user);
             return "Updated";
@@ -53,9 +58,14 @@ public class UserController {
     }
 
 
+
+
     @RequestMapping(path="/all", method = RequestMethod.POST)
-    public @ResponseBody Iterable<User> getAllUsers(){
-        return userRepository.findAll();
+    public @ResponseBody Iterable<User> getAllUsers(HttpServletRequest request){
+        Principal principal = request.getUserPrincipal();
+        Login login = loginRepository.findByName(principal.getName());
+        String group = login.getGroupName();
+        return userRepository.findByGroup(group);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.POST)
@@ -64,7 +74,7 @@ public class UserController {
         Optional<User> opt = userRepository.findById(id);
         if(opt.isPresent()){
             User user = opt.get();
-            user.setPassword(JasyptE.decrypt(user.getPassword()));
+//            user.setPassword(JasyptE.decrypt(user.getPassword()));
             return user;
         }
         return null;

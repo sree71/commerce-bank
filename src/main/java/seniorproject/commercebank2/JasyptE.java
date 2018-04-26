@@ -7,6 +7,7 @@ public class JasyptE{
     public static String encrypt(String plainText){
 
         BasicTextEncryptor textEncryptor = new BasicTextEncryptor();
+        textEncryptor.setPassword(plainText);
         String encryptedText = textEncryptor.encrypt(plainText);
         return encryptedText;
     }

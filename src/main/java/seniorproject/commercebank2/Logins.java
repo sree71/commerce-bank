@@ -29,9 +29,11 @@ public class Logins implements UserDetailsService{
             return null;
         }
 
+
         List<GrantedAuthority> auth = AuthorityUtils
                 .commaSeparatedStringToAuthorityList("ROLE_USER");
         String password = login.getPassword();
+        //String encrytypted = JasyptE.encrypt(password);
         return new org.springframework.security.core.userdetails.User(username, password,
                 auth);
 

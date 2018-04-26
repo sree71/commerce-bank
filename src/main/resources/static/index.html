@@ -12,6 +12,7 @@
 <h1 id="display">Credentials</h1>
 <button onclick="addUser()">Add</button>
 <button onclick="getUserList()">List</button>
+<button onclick="logout()">Logout</button>
 <br/>
 <br/>
 <table>
@@ -55,13 +56,11 @@
 
         
     function addUser(){
-    	var win = window.open("/createuser.html", '_blank');
-    	  win.focus();
+        var win = window.location.href="/createuser.html";
     }
         getUserList();
     function updateUser(id){
-            var win = window.location.href="/updateuser.html?id="+id;
-                //win.focus();
+        var win = window.location.href="/updateuser.html?id="+id;
     }
 
     function deleteUser(id) {
@@ -77,6 +76,10 @@
                 }
             });
         }
+    }
+
+    function logout(){
+        var win = window.location.href="/logout";
     }
 
 </script>
