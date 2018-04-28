@@ -1,8 +1,13 @@
 package seniorproject.commercebank2;
 
 
+import org.jasypt.encryption.pbe.PBEByteEncryptor;
+import org.springframework.context.ApplicationContext;
+
+import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.http.HttpStatus;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,14 +18,21 @@ import javax.swing.text.html.Option;
 import java.security.Principal;
 import java.util.Optional;
 
+//import static seniorproject.commercebank2.JasyptE.encrypt;
+
 @RestController
 @RequestMapping("/user")
 public class UserController {
+
+    ApplicationContext context = new FileSystemXmlApplicationContext(".idea/jasypt.xml");
+    StandardPBEStringEncryptor PBEencryptor = (StandardPBEStringEncryptor)context.getBean("strongEncryptor");
+
     @Autowired
     private UserRepository userRepository;
 
     @Autowired
     private LoginRepository loginRepository;
+
 
     @RequestMapping(path="/add", method = RequestMethod.POST)
     public @ResponseBody String addNewUser (@RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
@@ -33,12 +45,12 @@ public class UserController {
     }
 
     @RequestMapping(path="/update", method = RequestMethod.POST)
-    public @ResponseBody String updateUser (@RequestParam Long id, @RequestParam(defaultValue = "testGroup") String group, @RequestParam(defaultValue = "testAccount") String account,
-                                            @RequestParam(defaultValue = "testPassword") String password, @RequestParam(defaultValue = "testUser") String name){
+    public @ResponseBody String updateUser (@RequestParam Long id, @RequestParam String group, @RequestParam String account,
+                                            @RequestParam String newPassword, @RequestParam(defaultValue = "testUser") String name){
         Optional<User> opt = userRepository.findById(id);
         if(opt.isPresent()) {
             User user= opt.get();
-           String hashPassword = JasyptE.encrypt(password);
+           String hashPassword = PBEencryptor.encrypt(newPassword);
             user.updateUser(group, account, hashPassword, "", name);
             userRepository.save(user);
             return "Updated";
@@ -55,6 +67,20 @@ public class UserController {
             return "Deleted";
         }
         return "Not Found";
+    }
+
+    @RequestMapping(path="/display", method = RequestMethod.POST)
+    public @ResponseBody String displayPass(@RequestParam Long id) {
+        Optional<User> opt = userRepository.findById(id);
+        if (opt.isPresent()) {
+            User user = opt.get();
+            String password = user.getPassword();
+//           String decPass = JasyptE.decrypt(password);
+//            String decPass =
+
+            return (PBEencryptor.decrypt(password));
+        }
+        return "Error";
     }
 
 
@@ -80,3 +106,4 @@ public class UserController {
         return null;
     }
 }
+

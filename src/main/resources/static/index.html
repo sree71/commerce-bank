@@ -20,6 +20,8 @@
 <tr>
 <th>Name</th>
 <th>Account</th>
+<th></th>
+<th>Password</th>
 <th>Group</th>
 <th>Actions</th>
 </thead>
@@ -30,6 +32,7 @@
 </table>
 
 <script>
+
     function getUserList(){
         $("#content-body").html("");
         $.post("/user/all",
@@ -38,13 +41,18 @@
                     +"<br>";
                     var updatebutton = $("<input type='button' onclick='deleteUser("+data[i].id+")' value='Delete'>");
                     var deletebutton = $("<input type='button' onclick='updateUser("+data[i].id+")' value='Update'>");
+                    var displaybutton = $("<input type='button' onclick='displayPass("+data[i].id+")' value='Display'>");
                     var row = $("<tr/>");
                     var action = $("<td/>");
                     var name = $("<td>"+data[i].userName+"</td>");
                     var account = $("<td>"+data[i].accountName+"</td>");
+                    // var pass = $("<td>"+"</td>");
+                    var pass = $("<td id='pfield'>"+"</td>");
                     var group = $("<td>"+data[i].groupName+"</td>");
                     $(row).append(name);
                     $(row).append(account);
+                    $(row).append(displaybutton);
+                    $(row).append(pass);
                     $(row).append(group);
                     $(action).append(updatebutton);
                     $(action).append(deletebutton);
@@ -76,6 +84,21 @@
                 }
             });
         }
+    }
+
+    function displayPass(id){
+        $.ajax({
+            type: 'POST',
+            url: '/user/display' ,
+            data: 'id='+id,
+            success: function (response){
+                alert(response);
+                // pass = ("<td>"+JSON.stringify(response)+"</td>td>");
+                document.getElementById('pfield').value=(response);
+                //getUserList();
+            }
+        })
+
     }
 
     function logout(){
