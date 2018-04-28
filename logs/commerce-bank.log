@@ -1,0 +1,301 @@
+27-04-2018 22:53:08.353 [main] [INFO ] [s.c.CommerceBank2Application.logStarting] - Starting CommerceBank2Application on yoga-14 with PID 15157 (/home/bxp/IdeaProjects/commerce-bank-2/target/classes started by bxp in /home/bxp/IdeaProjects/commerce-bank-2)
+27-04-2018 22:53:08.361 [main] [DEBUG] [s.c.CommerceBank2Application.logStarting] - Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+27-04-2018 22:53:08.368 [main] [INFO ] [s.c.CommerceBank2Application.logStartupProfileInfo] - No active profile set, falling back to default profiles: default
+27-04-2018 22:53:08.524 [main] [INFO ] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@619713e5: startup date [Fri Apr 27 22:53:08 CDT 2018]; root of context hierarchy
+27-04-2018 22:53:10.056 [main] [INFO ] [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor.postProcessBeanFactory] - Post-processing PropertySource instances
+27-04-2018 22:53:10.105 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+27-04-2018 22:53:10.105 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+27-04-2018 22:53:10.106 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+27-04-2018 22:53:10.106 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource systemProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+27-04-2018 22:53:10.106 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+27-04-2018 22:53:10.107 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+27-04-2018 22:53:10.107 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+27-04-2018 22:53:10.225 [main] [INFO ] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b66eb3f4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+27-04-2018 22:53:10.512 [main] [INFO ] [o.s.b.w.e.tomcat.TomcatWebServer.initialize] - Tomcat initialized with port(s): 8080 (http)
+27-04-2018 22:53:10.524 [main] [INFO ] [o.a.coyote.http11.Http11NioProtocol.log] - Initializing ProtocolHandler ["http-nio-8080"]
+27-04-2018 22:53:10.533 [main] [INFO ] [o.a.catalina.core.StandardService.log] - Starting service [Tomcat]
+27-04-2018 22:53:10.533 [main] [INFO ] [o.a.catalina.core.StandardEngine.log] - Starting Servlet Engine: Apache Tomcat/8.5.28
+27-04-2018 22:53:10.537 [localhost-startStop-1] [INFO ] [o.a.c.core.AprLifecycleListener.log] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+27-04-2018 22:53:10.603 [localhost-startStop-1] [INFO ] [o.a.c.c.C.[Tomcat].[localhost].[/].log] - Initializing Spring embedded WebApplicationContext
+27-04-2018 22:53:10.603 [localhost-startStop-1] [INFO ] [o.s.web.context.ContextLoader.prepareWebApplicationContext] - Root WebApplicationContext: initialization completed in 2082 ms
+27-04-2018 22:53:10.733 [localhost-startStop-1] [INFO ] [o.s.b.w.s.FilterRegistrationBean.configure] - Mapping filter: 'characterEncodingFilter' to: [/*]
+27-04-2018 22:53:10.733 [localhost-startStop-1] [INFO ] [o.s.b.w.s.FilterRegistrationBean.configure] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+27-04-2018 22:53:10.734 [localhost-startStop-1] [INFO ] [o.s.b.w.s.FilterRegistrationBean.configure] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+27-04-2018 22:53:10.734 [localhost-startStop-1] [INFO ] [o.s.b.w.s.FilterRegistrationBean.configure] - Mapping filter: 'requestContextFilter' to: [/*]
+27-04-2018 22:53:10.734 [localhost-startStop-1] [INFO ] [o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure] - Mapping filter: 'springSecurityFilterChain' to: [/*]
+27-04-2018 22:53:10.735 [localhost-startStop-1] [INFO ] [o.s.b.w.s.ServletRegistrationBean.addRegistration] - Servlet dispatcherServlet mapped to [/]
+27-04-2018 22:53:10.763 [main] [INFO ] [c.u.j.r.DefaultLazyPropertyResolver.lambda$new$2] - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+27-04-2018 22:53:10.766 [main] [INFO ] [c.u.j.d.DefaultLazyPropertyDetector.lambda$new$2] - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+27-04-2018 22:53:10.900 [main] [INFO ] [com.zaxxer.hikari.HikariDataSource.getConnection] - HikariPool-1 - Starting...
+27-04-2018 22:53:11.165 [main] [INFO ] [com.zaxxer.hikari.HikariDataSource.getConnection] - HikariPool-1 - Start completed.
+27-04-2018 22:53:11.211 [main] [INFO ] [o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory] - Building JPA container EntityManagerFactory for persistence unit 'default'
+27-04-2018 22:53:11.223 [main] [INFO ] [o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+27-04-2018 22:53:11.406 [main] [INFO ] [org.hibernate.Version.logVersion] - HHH000412: Hibernate Core {5.2.14.Final}
+27-04-2018 22:53:11.408 [main] [INFO ] [org.hibernate.cfg.Environment.<clinit>] - HHH000206: hibernate.properties not found
+27-04-2018 22:53:11.437 [main] [INFO ] [o.h.annotations.common.Version.<clinit>] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+27-04-2018 22:53:11.526 [main] [INFO ] [org.hibernate.dialect.Dialect.<init>] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+27-04-2018 22:53:12.230 [main] [INFO ] [o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+27-04-2018 22:53:12.485 [main] [INFO ] [o.h.h.i.QueryTranslatorFactoryInitiator.initiateService] - HHH000397: Using ASTQueryTranslatorFactory
+27-04-2018 22:53:12.835 [main] [INFO ] [o.s.s.web.DefaultSecurityFilterChain.<init>] - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@66e17eff, org.springframework.security.web.context.SecurityContextPersistenceFilter@23468512, org.springframework.security.web.header.HeaderWriterFilter@1c240cf2, org.springframework.security.web.authentication.logout.LogoutFilter@7f0b93b4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6b2dd3df, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e8279e5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e9474f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4bb1b96b, org.springframework.security.web.session.SessionManagementFilter@58f2466c, org.springframework.security.web.access.ExceptionTranslationFilter@193bb809, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6ad179b4]
+27-04-2018 22:53:13.164 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@619713e5: startup date [Fri Apr 27 22:53:08 CDT 2018]; root of context hierarchy
+27-04-2018 22:53:13.197 [main] [WARN ] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+27-04-2018 22:53:13.233 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/login/{id}],methods=[POST]}" onto public seniorproject.commercebank2.Login seniorproject.commercebank2.LoginController.getLogin(java.lang.Long)
+27-04-2018 22:53:13.235 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/user/update],methods=[POST]}" onto public java.lang.String seniorproject.commercebank2.UserController.updateUser(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+27-04-2018 22:53:13.236 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/user/delete],methods=[POST]}" onto public java.lang.String seniorproject.commercebank2.UserController.deleteUser(java.lang.Long)
+27-04-2018 22:53:13.236 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/user/all],methods=[POST]}" onto public java.lang.Iterable<seniorproject.commercebank2.User> seniorproject.commercebank2.UserController.getAllUsers(javax.servlet.http.HttpServletRequest)
+27-04-2018 22:53:13.237 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/user/add],methods=[POST]}" onto public java.lang.String seniorproject.commercebank2.UserController.addNewUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+27-04-2018 22:53:13.238 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/user/{id}],methods=[POST]}" onto public seniorproject.commercebank2.User seniorproject.commercebank2.UserController.getUser(java.lang.Long)
+27-04-2018 22:53:13.242 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+27-04-2018 22:53:13.243 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+27-04-2018 22:53:13.259 [main] [INFO ] [o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler] - Mapped URL path [/index] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+27-04-2018 22:53:13.259 [main] [INFO ] [o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler] - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+27-04-2018 22:53:13.260 [main] [INFO ] [o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler] - Mapped URL path [/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+27-04-2018 22:53:13.277 [main] [INFO ] [o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+27-04-2018 22:53:13.277 [main] [INFO ] [o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+27-04-2018 22:53:13.328 [main] [INFO ] [o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+27-04-2018 22:53:13.358 [main] [WARN ] [o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+27-04-2018 22:53:13.407 [main] [INFO ] [o.s.b.a.w.s.WelcomePageHandlerMapping.<init>] - Adding welcome page: class path resource [static/index.html]
+27-04-2018 22:53:13.581 [main] [INFO ] [o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated] - Registering beans for JMX exposure on startup
+27-04-2018 22:53:13.583 [main] [INFO ] [o.s.j.e.a.AnnotationMBeanExporter.autodetect] - Bean with name 'dataSource' has been autodetected for JMX exposure
+27-04-2018 22:53:13.589 [main] [INFO ] [o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+27-04-2018 22:53:13.601 [main] [INFO ] [o.a.coyote.http11.Http11NioProtocol.log] - Starting ProtocolHandler ["http-nio-8080"]
+27-04-2018 22:53:13.605 [main] [INFO ] [o.a.tomcat.util.net.NioSelectorPool.log] - Using a shared selector for servlet write/read
+27-04-2018 22:53:13.616 [main] [INFO ] [o.s.b.w.e.tomcat.TomcatWebServer.start] - Tomcat started on port(s): 8080 (http) with context path ''
+27-04-2018 22:53:13.619 [main] [INFO ] [s.c.CommerceBank2Application.logStarted] - Started CommerceBank2Application in 6.094 seconds (JVM running for 7.406)
+27-04-2018 22:53:24.391 [http-nio-8080-exec-1] [INFO ] [o.a.c.c.C.[Tomcat].[localhost].[/].log] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+27-04-2018 22:53:24.392 [http-nio-8080-exec-1] [INFO ] [o.s.web.servlet.DispatcherServlet.initServletBean] - FrameworkServlet 'dispatcherServlet': initialization started
+27-04-2018 22:53:24.418 [http-nio-8080-exec-1] [INFO ] [o.s.web.servlet.DispatcherServlet.initServletBean] - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+27-04-2018 23:01:24.785 [Thread-16] [INFO ] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose] - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@619713e5: startup date [Fri Apr 27 22:53:08 CDT 2018]; root of context hierarchy
+27-04-2018 23:01:24.788 [Thread-16] [INFO ] [o.s.j.e.a.AnnotationMBeanExporter.destroy] - Unregistering JMX-exposed beans on shutdown
+27-04-2018 23:01:24.789 [Thread-16] [INFO ] [o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans] - Unregistering JMX-exposed beans
+27-04-2018 23:01:24.794 [Thread-16] [INFO ] [o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy] - Closing JPA EntityManagerFactory for persistence unit 'default'
+27-04-2018 23:01:24.796 [Thread-16] [INFO ] [com.zaxxer.hikari.HikariDataSource.close] - HikariPool-1 - Shutdown initiated...
+27-04-2018 23:01:24.806 [Thread-16] [INFO ] [com.zaxxer.hikari.HikariDataSource.close] - HikariPool-1 - Shutdown completed.
+27-04-2018 23:10:48.688 [main] [INFO ] [s.c.CommerceBank2Application.logStarting] - Starting CommerceBank2Application on yoga-14 with PID 19772 (/home/bxp/IdeaProjects/commerce-bank-2/target/classes started by bxp in /home/bxp/IdeaProjects/commerce-bank-2)
+27-04-2018 23:10:48.692 [main] [DEBUG] [s.c.CommerceBank2Application.logStarting] - Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+27-04-2018 23:10:48.694 [main] [INFO ] [s.c.CommerceBank2Application.logStartupProfileInfo] - No active profile set, falling back to default profiles: default
+27-04-2018 23:10:48.858 [main] [INFO ] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1d9b7cce: startup date [Fri Apr 27 23:10:48 CDT 2018]; root of context hierarchy
+27-04-2018 23:10:50.389 [main] [INFO ] [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor.postProcessBeanFactory] - Post-processing PropertySource instances
+27-04-2018 23:10:50.447 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+27-04-2018 23:10:50.448 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+27-04-2018 23:10:50.449 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+27-04-2018 23:10:50.449 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource systemProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+27-04-2018 23:10:50.449 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+27-04-2018 23:10:50.449 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+27-04-2018 23:10:50.450 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+27-04-2018 23:10:50.581 [main] [INFO ] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff092e4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+27-04-2018 23:10:50.863 [main] [INFO ] [o.s.b.w.e.tomcat.TomcatWebServer.initialize] - Tomcat initialized with port(s): 8080 (http)
+27-04-2018 23:10:50.874 [main] [INFO ] [o.a.coyote.http11.Http11NioProtocol.log] - Initializing ProtocolHandler ["http-nio-8080"]
+27-04-2018 23:10:50.882 [main] [INFO ] [o.a.catalina.core.StandardService.log] - Starting service [Tomcat]
+27-04-2018 23:10:50.882 [main] [INFO ] [o.a.catalina.core.StandardEngine.log] - Starting Servlet Engine: Apache Tomcat/8.5.28
+27-04-2018 23:10:50.886 [localhost-startStop-1] [INFO ] [o.a.c.core.AprLifecycleListener.log] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+27-04-2018 23:10:50.952 [localhost-startStop-1] [INFO ] [o.a.c.c.C.[Tomcat].[localhost].[/].log] - Initializing Spring embedded WebApplicationContext
+27-04-2018 23:10:50.952 [localhost-startStop-1] [INFO ] [o.s.web.context.ContextLoader.prepareWebApplicationContext] - Root WebApplicationContext: initialization completed in 2103 ms
+27-04-2018 23:10:51.072 [localhost-startStop-1] [INFO ] [o.s.b.w.s.FilterRegistrationBean.configure] - Mapping filter: 'characterEncodingFilter' to: [/*]
+27-04-2018 23:10:51.073 [localhost-startStop-1] [INFO ] [o.s.b.w.s.FilterRegistrationBean.configure] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+27-04-2018 23:10:51.073 [localhost-startStop-1] [INFO ] [o.s.b.w.s.FilterRegistrationBean.configure] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+27-04-2018 23:10:51.073 [localhost-startStop-1] [INFO ] [o.s.b.w.s.FilterRegistrationBean.configure] - Mapping filter: 'requestContextFilter' to: [/*]
+27-04-2018 23:10:51.073 [localhost-startStop-1] [INFO ] [o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure] - Mapping filter: 'springSecurityFilterChain' to: [/*]
+27-04-2018 23:10:51.074 [localhost-startStop-1] [INFO ] [o.s.b.w.s.ServletRegistrationBean.addRegistration] - Servlet dispatcherServlet mapped to [/]
+27-04-2018 23:10:51.102 [main] [INFO ] [c.u.j.r.DefaultLazyPropertyResolver.lambda$new$2] - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+27-04-2018 23:10:51.105 [main] [INFO ] [c.u.j.d.DefaultLazyPropertyDetector.lambda$new$2] - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+27-04-2018 23:10:51.207 [main] [INFO ] [com.zaxxer.hikari.HikariDataSource.getConnection] - HikariPool-1 - Starting...
+27-04-2018 23:10:51.577 [main] [INFO ] [com.zaxxer.hikari.HikariDataSource.getConnection] - HikariPool-1 - Start completed.
+27-04-2018 23:10:51.623 [main] [INFO ] [o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory] - Building JPA container EntityManagerFactory for persistence unit 'default'
+27-04-2018 23:10:51.635 [main] [INFO ] [o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+27-04-2018 23:10:51.799 [main] [INFO ] [org.hibernate.Version.logVersion] - HHH000412: Hibernate Core {5.2.14.Final}
+27-04-2018 23:10:51.801 [main] [INFO ] [org.hibernate.cfg.Environment.<clinit>] - HHH000206: hibernate.properties not found
+27-04-2018 23:10:51.831 [main] [INFO ] [o.h.annotations.common.Version.<clinit>] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+27-04-2018 23:10:51.910 [main] [INFO ] [org.hibernate.dialect.Dialect.<init>] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+27-04-2018 23:10:52.655 [main] [INFO ] [o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+27-04-2018 23:10:52.899 [main] [INFO ] [o.h.h.i.QueryTranslatorFactoryInitiator.initiateService] - HHH000397: Using ASTQueryTranslatorFactory
+27-04-2018 23:10:52.980 [main] [INFO ] [o.s.c.s.FileSystemXmlApplicationContext.prepareRefresh] - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@3a401749: startup date [Fri Apr 27 23:10:52 CDT 2018]; root of context hierarchy
+27-04-2018 23:10:52.982 [main] [INFO ] [o.s.b.f.xml.XmlBeanDefinitionReader.loadBeanDefinitions] - Loading XML bean definitions from file [/home/bxp/IdeaProjects/commerce-bank-2/.idea/jasypt.xml]
+27-04-2018 23:10:52.984 [main] [WARN ] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [/home/bxp/IdeaProjects/commerce-bank-2/target/classes/seniorproject/commercebank2/UserController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [seniorproject.commercebank2.UserController]: Constructor threw exception; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from file [/home/bxp/IdeaProjects/commerce-bank-2/.idea/jasypt.xml]; nested exception is java.io.FileNotFoundException: .idea/jasypt.xml
+27-04-2018 23:10:52.985 [main] [INFO ] [o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy] - Closing JPA EntityManagerFactory for persistence unit 'default'
+27-04-2018 23:10:52.985 [main] [INFO ] [com.zaxxer.hikari.HikariDataSource.close] - HikariPool-1 - Shutdown initiated...
+27-04-2018 23:10:52.989 [main] [INFO ] [com.zaxxer.hikari.HikariDataSource.close] - HikariPool-1 - Shutdown completed.
+27-04-2018 23:10:52.990 [main] [INFO ] [o.a.catalina.core.StandardService.log] - Stopping service [Tomcat]
+27-04-2018 23:10:53.004 [main] [INFO ] [o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+27-04-2018 23:10:53.012 [main] [ERROR] [o.s.boot.SpringApplication.reportFailure] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [/home/bxp/IdeaProjects/commerce-bank-2/target/classes/seniorproject/commercebank2/UserController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [seniorproject.commercebank2.UserController]: Constructor threw exception; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from file [/home/bxp/IdeaProjects/commerce-bank-2/.idea/jasypt.xml]; nested exception is java.io.FileNotFoundException: .idea/jasypt.xml
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:388)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1234)
+	at seniorproject.commercebank2.CommerceBank2Application.main(CommerceBank2Application.java:10)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [seniorproject.commercebank2.UserController]: Constructor threw exception; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from file [/home/bxp/IdeaProjects/commerce-bank-2/.idea/jasypt.xml]; nested exception is java.io.FileNotFoundException: .idea/jasypt.xml
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:182)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1224)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from file [/home/bxp/IdeaProjects/commerce-bank-2/.idea/jasypt.xml]; nested exception is java.io.FileNotFoundException: .idea/jasypt.xml
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:343)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:194)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:258)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:128)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:133)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:620)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:521)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:142)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:85)
+	at seniorproject.commercebank2.UserController.<init>(UserController.java:27)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:170)
+	... 19 common frames omitted
+Caused by: java.io.FileNotFoundException: .idea/jasypt.xml
+	at org.springframework.core.io.FileSystemResource.getInputStream(FileSystemResource.java:129)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:329)
+	... 37 common frames omitted
+28-04-2018 08:11:27.926 [main] [INFO ] [s.c.CommerceBank2Application.logStarting] - Starting CommerceBank2Application on yoga-14 with PID 31283 (/home/bxp/IdeaProjects/commerce-bank-2/target/classes started by bxp in /home/bxp/IdeaProjects/commerce-bank-2)
+28-04-2018 08:11:27.929 [main] [DEBUG] [s.c.CommerceBank2Application.logStarting] - Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+28-04-2018 08:11:27.932 [main] [INFO ] [s.c.CommerceBank2Application.logStartupProfileInfo] - No active profile set, falling back to default profiles: default
+28-04-2018 08:11:28.011 [main] [INFO ] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@130161f7: startup date [Sat Apr 28 08:11:28 CDT 2018]; root of context hierarchy
+28-04-2018 08:11:29.689 [main] [INFO ] [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor.postProcessBeanFactory] - Post-processing PropertySource instances
+28-04-2018 08:11:29.762 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+28-04-2018 08:11:29.763 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+28-04-2018 08:11:29.764 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+28-04-2018 08:11:29.764 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource systemProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+28-04-2018 08:11:29.765 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+28-04-2018 08:11:29.765 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+28-04-2018 08:11:29.765 [main] [INFO ] [c.u.j.EncryptablePropertySourceConverter.makeEncryptable] - Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+28-04-2018 08:11:29.959 [main] [INFO ] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b4c06399] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+28-04-2018 08:11:30.258 [main] [INFO ] [o.s.b.w.e.tomcat.TomcatWebServer.initialize] - Tomcat initialized with port(s): 8080 (http)
+28-04-2018 08:11:30.268 [main] [INFO ] [o.a.coyote.http11.Http11NioProtocol.log] - Initializing ProtocolHandler ["http-nio-8080"]
+28-04-2018 08:11:30.276 [main] [INFO ] [o.a.catalina.core.StandardService.log] - Starting service [Tomcat]
+28-04-2018 08:11:30.277 [main] [INFO ] [o.a.catalina.core.StandardEngine.log] - Starting Servlet Engine: Apache Tomcat/8.5.28
+28-04-2018 08:11:30.286 [localhost-startStop-1] [INFO ] [o.a.c.core.AprLifecycleListener.log] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+28-04-2018 08:11:30.350 [localhost-startStop-1] [INFO ] [o.a.c.c.C.[Tomcat].[localhost].[/].log] - Initializing Spring embedded WebApplicationContext
+28-04-2018 08:11:30.350 [localhost-startStop-1] [INFO ] [o.s.web.context.ContextLoader.prepareWebApplicationContext] - Root WebApplicationContext: initialization completed in 2342 ms
+28-04-2018 08:11:30.469 [localhost-startStop-1] [INFO ] [o.s.b.w.s.FilterRegistrationBean.configure] - Mapping filter: 'characterEncodingFilter' to: [/*]
+28-04-2018 08:11:30.470 [localhost-startStop-1] [INFO ] [o.s.b.w.s.FilterRegistrationBean.configure] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+28-04-2018 08:11:30.470 [localhost-startStop-1] [INFO ] [o.s.b.w.s.FilterRegistrationBean.configure] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+28-04-2018 08:11:30.470 [localhost-startStop-1] [INFO ] [o.s.b.w.s.FilterRegistrationBean.configure] - Mapping filter: 'requestContextFilter' to: [/*]
+28-04-2018 08:11:30.471 [localhost-startStop-1] [INFO ] [o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure] - Mapping filter: 'springSecurityFilterChain' to: [/*]
+28-04-2018 08:11:30.471 [localhost-startStop-1] [INFO ] [o.s.b.w.s.ServletRegistrationBean.addRegistration] - Servlet dispatcherServlet mapped to [/]
+28-04-2018 08:11:30.503 [main] [INFO ] [c.u.j.r.DefaultLazyPropertyResolver.lambda$new$2] - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+28-04-2018 08:11:30.506 [main] [INFO ] [c.u.j.d.DefaultLazyPropertyDetector.lambda$new$2] - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+28-04-2018 08:11:30.625 [main] [INFO ] [com.zaxxer.hikari.HikariDataSource.getConnection] - HikariPool-1 - Starting...
+28-04-2018 08:11:30.834 [main] [INFO ] [com.zaxxer.hikari.HikariDataSource.getConnection] - HikariPool-1 - Start completed.
+28-04-2018 08:11:30.888 [main] [INFO ] [o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory] - Building JPA container EntityManagerFactory for persistence unit 'default'
+28-04-2018 08:11:30.995 [main] [INFO ] [o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+28-04-2018 08:11:31.052 [main] [INFO ] [org.hibernate.Version.logVersion] - HHH000412: Hibernate Core {5.2.14.Final}
+28-04-2018 08:11:31.055 [main] [INFO ] [org.hibernate.cfg.Environment.<clinit>] - HHH000206: hibernate.properties not found
+28-04-2018 08:11:31.091 [main] [INFO ] [o.h.annotations.common.Version.<clinit>] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+28-04-2018 08:11:31.172 [main] [INFO ] [org.hibernate.dialect.Dialect.<init>] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+28-04-2018 08:11:31.750 [main] [INFO ] [o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-04-2018 08:11:32.007 [main] [INFO ] [o.h.h.i.QueryTranslatorFactoryInitiator.initiateService] - HHH000397: Using ASTQueryTranslatorFactory
+28-04-2018 08:11:32.376 [main] [INFO ] [o.s.s.web.DefaultSecurityFilterChain.<init>] - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ef85555, org.springframework.security.web.context.SecurityContextPersistenceFilter@78b7f805, org.springframework.security.web.header.HeaderWriterFilter@193bb809, org.springframework.security.web.authentication.logout.LogoutFilter@5ae15, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@310b2b6f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5809fa26, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64b0d1fa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5bcec67e, org.springframework.security.web.session.SessionManagementFilter@20801cbb, org.springframework.security.web.access.ExceptionTranslationFilter@626d2016, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@29079032]
+28-04-2018 08:11:32.631 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@130161f7: startup date [Sat Apr 28 08:11:28 CDT 2018]; root of context hierarchy
+28-04-2018 08:11:32.659 [main] [WARN ] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-04-2018 08:11:32.693 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/login/{id}],methods=[POST]}" onto public seniorproject.commercebank2.Login seniorproject.commercebank2.LoginController.getLogin(java.lang.Long)
+28-04-2018 08:11:32.695 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/user/update],methods=[POST]}" onto public java.lang.String seniorproject.commercebank2.UserController.updateUser(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+28-04-2018 08:11:32.696 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/user/delete],methods=[POST]}" onto public java.lang.String seniorproject.commercebank2.UserController.deleteUser(java.lang.Long)
+28-04-2018 08:11:32.696 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/user/all],methods=[POST]}" onto public java.lang.Iterable<seniorproject.commercebank2.User> seniorproject.commercebank2.UserController.getAllUsers(javax.servlet.http.HttpServletRequest)
+28-04-2018 08:11:32.697 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/user/add],methods=[POST]}" onto public java.lang.String seniorproject.commercebank2.UserController.addNewUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+28-04-2018 08:11:32.697 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/user/{id}],methods=[POST]}" onto public seniorproject.commercebank2.User seniorproject.commercebank2.UserController.getUser(java.lang.Long)
+28-04-2018 08:11:32.701 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+28-04-2018 08:11:32.702 [main] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping.register] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+28-04-2018 08:11:32.717 [main] [INFO ] [o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler] - Mapped URL path [/index] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+28-04-2018 08:11:32.717 [main] [INFO ] [o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler] - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+28-04-2018 08:11:32.717 [main] [INFO ] [o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler] - Mapped URL path [/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+28-04-2018 08:11:32.732 [main] [INFO ] [o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+28-04-2018 08:11:32.732 [main] [INFO ] [o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+28-04-2018 08:11:32.769 [main] [INFO ] [o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+28-04-2018 08:11:32.800 [main] [WARN ] [o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+28-04-2018 08:11:32.839 [main] [INFO ] [o.s.b.a.w.s.WelcomePageHandlerMapping.<init>] - Adding welcome page: class path resource [static/index.html]
+28-04-2018 08:11:33.008 [main] [INFO ] [o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated] - Registering beans for JMX exposure on startup
+28-04-2018 08:11:33.009 [main] [INFO ] [o.s.j.e.a.AnnotationMBeanExporter.autodetect] - Bean with name 'dataSource' has been autodetected for JMX exposure
+28-04-2018 08:11:33.015 [main] [INFO ] [o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+28-04-2018 08:11:33.026 [main] [INFO ] [o.a.coyote.http11.Http11NioProtocol.log] - Starting ProtocolHandler ["http-nio-8080"]
+28-04-2018 08:11:33.030 [main] [INFO ] [o.a.tomcat.util.net.NioSelectorPool.log] - Using a shared selector for servlet write/read
+28-04-2018 08:11:33.040 [main] [INFO ] [o.s.b.w.e.tomcat.TomcatWebServer.start] - Tomcat started on port(s): 8080 (http) with context path ''
+28-04-2018 08:11:33.042 [main] [INFO ] [s.c.CommerceBank2Application.logStarted] - Started CommerceBank2Application in 5.62 seconds (JVM running for 6.659)
+28-04-2018 08:12:12.538 [http-nio-8080-exec-1] [INFO ] [o.a.c.c.C.[Tomcat].[localhost].[/].log] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+28-04-2018 08:12:12.538 [http-nio-8080-exec-1] [INFO ] [o.s.web.servlet.DispatcherServlet.initServletBean] - FrameworkServlet 'dispatcherServlet': initialization started
+28-04-2018 08:12:12.561 [http-nio-8080-exec-1] [INFO ] [o.s.web.servlet.DispatcherServlet.initServletBean] - FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+28-04-2018 08:12:29.756 [http-nio-8080-exec-5] [ERROR] [o.s.s.w.a.UsernamePasswordAuthenticationFilter.doFilter] - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: UserDetailsService returned null, which is an interface contract violation
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:106)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:174)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:94)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)

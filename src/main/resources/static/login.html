@@ -28,12 +28,7 @@
     <title>seniorproject.commercebank2.Login</title>
 </head>
 <body >
-<div th:if="${param.error}">
-    Invalid username and password.
-</div>
-<div th:if="${param.logout}">
-    You have been logged out.
-</div>
+
 <form th:action="@{/login}" method="post" id="rcorners" style="border: 7px solid #588c7e">
 
     <div class="container" style="text-align: center;"><label>
