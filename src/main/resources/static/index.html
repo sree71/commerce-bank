@@ -22,6 +22,7 @@
 <th>Account</th>
 <th></th>
 <th>Password</th>
+<th>Salt</th>
 <th>Group</th>
 <th>Actions</th>
 </thead>
@@ -46,13 +47,15 @@
                     var action = $("<td/>");
                     var name = $("<td>"+data[i].userName+"</td>");
                     var account = $("<td>"+data[i].accountName+"</td>");
-                    // var pass = $("<td>"+"</td>");
-                    var pass = $("<td id='pfield'>"+"</td>");
+                    var pass = $("<td id='para'>"+data[i].password+"</td>");
+                    var salt = $("<td id='para'>"+data[i].salt+"</td>");
+                    //var pass = $("<td id='pfield'>"+"</td>");
                     var group = $("<td>"+data[i].groupName+"</td>");
                     $(row).append(name);
                     $(row).append(account);
                     $(row).append(displaybutton);
                     $(row).append(pass);
+                    $(row).append(salt);
                     $(row).append(group);
                     $(action).append(updatebutton);
                     $(action).append(deletebutton);
@@ -73,7 +76,7 @@
 
     function deleteUser(id) {
         var r = confirm("Are you sure you want to delete a user");
-        if (r == true) {
+        if (r) {
             $.ajax({
                 type: 'POST',
                 url: '/user/delete',
@@ -87,19 +90,21 @@
     }
 
     function displayPass(id){
-        $.ajax({
-            type: 'POST',
-            url: '/user/display' ,
-            data: 'id='+id,
-            success: function (response){
-                alert(response);
-                // pass = ("<td>"+JSON.stringify(response)+"</td>td>");
-                document.getElementById('pfield').value=(response);
-                //getUserList();
-            }
-        })
-
+        window.open("/credentials.html?id="+id, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=600,height=400");
+        //var win = window.location.href="/credentials.html?id="+id;
     }
+    // function displayPass(id){
+    //     $.ajax({
+    //         type: 'POST',
+    //         url: '/user/display' ,
+    //         data: 'id='+id,
+    //         success: function (response){
+    //             // return response;
+    //             document.getElementById('para').innerHTML = response;
+    //         }
+    //     })
+    //
+    // }
 
     function logout(){
         var win = window.location.href="/logout";
