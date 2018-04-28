@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+    <!--...-->
+    <!--xmlns:encryption="http://www.jasypt.org/schema/encryption"-->
+    <!--...-->
+    <!--xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+    <!--http://www.springframework.org/schema/beans/spring-beans-3.1.xsd-->
+    <!--...-->
+    <!--http://www.jasypt.org/schema/encryption-->
+    <!--http://www.jasypt.org/schema/encryption/jasypt-spring31-encryption-1.xsd-->
+    <!--...">-->
+
+    <bean id="strongEncryptor"
+          class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+        <property name="algorithm">
+            <value>PBEWithMD5AndTripleDES</value>
+        </property>
+        <property name="password">
+            <value>jasypt</value>
+        </property>
+    </bean>
+
+    <bean id="saltGen"
+          class="org.jasypt.salt.RandomSaltGenerator">
+
+    </bean>
+
+</beans>
