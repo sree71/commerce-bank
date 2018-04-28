@@ -1,24 +1,46 @@
 
 <!DOCTYPE html>
-<!-- <link rel="stylesheet" type="text/css" href="loginstyle.css" src="login.js"> -->
-
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html >
 <head>
+
+
+
+<style>
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    #rcorners {
+        border-radius: 25px;
+        background: white;
+        padding: 20px;
+        width: 200px;
+        height: 100px;
+
+
+
+    }
+
+</style>
 
     <title>seniorproject.commercebank2.Login</title>
 </head>
-<body>
-<div th:if="${param.error}">
-    Invalid username and password.
-</div>
-<div th:if="${param.logout}">
-    You have been logged out.
-</div>
-<form th:action="@{/login}" method="post">
-    <div><label> User Name : <input type="text" name="username"/> </label></div>
-    <div><label> Password: <input type="password" name="password"/> </label></div>
-    <div><input type="submit" value="Sign In"/></div>
+<body >
+
+<form th:action="@{/login}" method="post" id="rcorners" style="border: 7px solid #588c7e">
+
+    <div class="container" style="text-align: center;"><label>
+        <b> User Name: </b>
+        <input type="text" placeholder="enter username" name="username"/> </label></div>
+
+    <div style="text-align: center;"><label>
+        <b> Password: </b>
+        <input type="password" placeholder="enter password" name="password"/> </label></div>
+
+    <div class="clearfix" style="text-align: center;"><input type="submit" value="Sign In"/></div>
+
 </form>
 </body>
 </html>
