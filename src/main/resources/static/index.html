@@ -20,6 +20,7 @@
 <tr>
 <th>Name</th>
 <th>Account</th>
+<th>Password</th>
 <th>Group</th>
 <th>Actions</th>
 </thead>
@@ -42,9 +43,11 @@
                     var action = $("<td/>");
                     var name = $("<td>"+data[i].userName+"</td>");
                     var account = $("<td>"+data[i].accountName+"</td>");
+                    var pass = $("<td>"+data[i].password+"</td>");
                     var group = $("<td>"+data[i].groupName+"</td>");
                     $(row).append(name);
                     $(row).append(account);
+                    $(row).append(pass);
                     $(row).append(group);
                     $(action).append(updatebutton);
                     $(action).append(deletebutton);
